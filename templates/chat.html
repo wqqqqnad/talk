@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>채팅창</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="채팅창 헤드">
+        <div class="친구1 태그">친구 이미지</div>
+        <div>채팅방이름</div>
+        <div>채팅방 미리 보기</div>
+    </div>
+    <ul class="채팅창">
+        {% for message in messages %}
+            <li class="채팅">{{ message.content }}</li>
+        {% endfor %}
+    </ul>
+    <form action="/chat" method="POST">
+        <div class="입력창">
+            <textarea class="입력공간" name="content"></textarea>
+            <input class="보내기" type="submit" value="전송">
+        </div>
+    </form>
+</body>
+</html>

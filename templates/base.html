@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    {% endblock %}
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="왼쪽사이드바">
+        <div>
+            <ul>
+                <li>
+                    <a class="active" href="/friends">
+                    <img>친구창</img>
+                    </a>
+                </li>
+                <li>
+                    <a class="active" href="/chats">
+                    <img>채팅창</img>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="위쪽사이드바">
+        <div>친구</div>
+        <img src="" alt="">검색창버튼</img>
+        <img src="" alt="">친구추가버튼</img>
+    </div>
+    <div class="컨테이너">
+    {% block content %}
+    {% endblock %}
+    </div>
+</body>
+</html>
